@@ -13,7 +13,7 @@ else:
     primeslist=[]
     for counter in range(x1,x2+1):
         checker=True
-        for number in range (2,(counter)**(1/2)):#Doesn't include 1 or the number itself, since those wouldn't count in searching for primes
+        for number in range (2,int(ma.ceil(ma.sqrt(counter)+1))):#Doesn't include 1 or the number itself, since those wouldn't count in searching for primes
             if float(counter)/number==counter/number:
                 checker=False
             if counter==1:
@@ -23,9 +23,10 @@ else:
     print "Finding primes between",x1,"and", x2
     print ("...")
     for walker in range(1,len(primeslist)+1):
-        print(primeslist[walker-1]) #This seems like a better/more readable format than just printing the list
+        print(primeslist[walker-1])#This seems like a better/more readable format than just printing the list
     if len(primeslist)==0:
         print("No primes found")
+print("There are "+str(len(primeslist))+" primes between "+str(x1)+" and "+str(x2))
 
 
 """ Text enclosed in triple quotes is also a comment.
