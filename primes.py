@@ -3,7 +3,7 @@
 import math as ma
 # To use a math function, write "ma." in front of it.  Example:  ma.sin(3.146)
 
-print("This program will find prime numbers. Choose two positive integers to find primes between: ")   
+print("This program will find prime numbers. Choose two positive integers to find primes between: ")
 # These functions will ask you for your number ranges, and assign them to 'x1' and 'x2'
 x1 = int(raw_input('Smallest number to check: '))
 x2 = int(raw_input('Largest number to check: '))
@@ -13,7 +13,7 @@ else:
     primeslist=[]
     for counter in range(x1,x2+1):
         checker=True
-        for number in range (2,counter):#Doesn't include 1 or the number itself, since those wouldn't count in searching for primes
+        for number in range (2,(counter)**(1/2)):#Doesn't include 1 or the number itself, since those wouldn't count in searching for primes
             if float(counter)/number==counter/number:
                 checker=False
             if counter==1:
